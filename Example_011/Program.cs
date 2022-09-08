@@ -40,16 +40,16 @@ void FillArray(int[] collection)
 
 }
 
-void PrintArray(int[] col)
-{
-    int count = col.Length;
-    int position = 0;
-    while (position < count)
-    {
-        Console.WriteLine(col[position]);
-        position++;
-    }
-}
+// void PrintArray(int[] col)
+// {
+//     int count = col.Length;
+//     int position = 0;
+//     while (position < count)
+//     {
+//         Console.WriteLine(col[position]);
+//         position++;
+//     }
+// }
 
 int IndexOf(int[] collection, int find)
 {
@@ -74,8 +74,16 @@ int IndexOf(int[] collection, int find)
 int[] array = new int[10];
 
 FillArray(array);
-PrintArray(array);
-Console.WriteLine();
+// PrintArray(array);
+// Console.WriteLine();
+// Вывод массива в консоль списком используя цикл(функция, метод PrintArray)
+
+var str = string.Join(" ", array);
+Console.WriteLine(str);
+// Вывод массива в консоль в одну строку без цикла (без скобок и запятых).
+
+// Console.WriteLine("[{0}]", string.Join(", ", array));
+// Вывод массива в консоль в одну строку без цикла (с квадратными скобками и запятыми).
 
 int pos = IndexOf(array, 4);
 Console.WriteLine(pos);
